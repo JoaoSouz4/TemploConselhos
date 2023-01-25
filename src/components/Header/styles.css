@@ -1,14 +1,16 @@
 @keyframes open {
     to{
         transform: translate(0px);
-        transition: 0.3s ease;
     }
 }
 
 @keyframes close {
+
+    from {
+        transform: translate(0px);
+    }
     to{
-        transform: translate(-172px);
-        transition: 0.3s ease;
+        animation-direction: reverse;
     }
 }
 
@@ -19,8 +21,8 @@ header{
     animation-name: close;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    transform: translate(-172px);
-    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: translate(-196px);
+    animation-timing-function: ease ease-in-out;
 }
 
 .header-container{
@@ -70,6 +72,12 @@ header{
     transition: 0.2s ease;
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 

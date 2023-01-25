@@ -1,4 +1,7 @@
 import './styles.css';
+import { AiFillHome } from 'react-icons/ai'
+import { ImDatabase } from 'react-icons/im'
+import { HiDocumentText } from 'react-icons/hi'
 import { BiMenu } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
@@ -22,9 +25,16 @@ export const Header = () => {
      <header ref = {sidebarButton}>
         <div className='header-container'>
             <nav>
-                <a href="">Home</a>
-                <a href="">Gerenciar mensagens</a>
-                <a href="">Doc do Projeto</a>
+                <Link to = {'/'}>
+                    <div className="icon"><AiFillHome/>Home</div>
+                </Link>
+
+                <Link to = {'/Gerenciar mensagens'}>
+                    <div className="icon"><ImDatabase/>Gerenciar mensagens</div>
+                </Link>
+                <a href="#">
+                    <div className="icon"><HiDocumentText/>Doc do projeto</div>
+                </a>
             </nav>
         </div>
 
