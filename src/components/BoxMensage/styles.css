@@ -1,9 +1,36 @@
 section {
     display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(187, 187, 187);
+}
+
+.fav-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    padding-bottom: 0px;
+    color: white;
+}
+
+.fav-icon .icon{
+    padding: 5px;
+}
+
+.fav-icon .icon:hover{
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: rgb(54, 54, 54);
+}
+
+.msg {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
     width: 100%;
-    height: 100px;
-    background-color: rgb(187, 187, 187);
+    height: 100%;
+    padding: 10px 10px;
+    padding-top: 0px ;
 }
