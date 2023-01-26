@@ -1,7 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles.css'
 
 export const DataBaseManager = () => {
+
+    const [dataStorage, setDataStorage] = useState();
+
+    useEffect(()=>{
+        const data = localStorage.getItem('key');
+        setDataStorage(data);
+        console.log(dataStorage)
+    }, [])
 
     return (
         <div className='manager-container'>
@@ -13,7 +21,6 @@ export const DataBaseManager = () => {
            
                 <input type="text" placeholder='Pesquisar mensagem salva'/>
                 <div className='container-msg'>
-
                 </div>
         </div>
     )
