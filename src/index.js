@@ -16,7 +16,7 @@ root.render(
     <Header/>
       <Routes>
         <Route path='/' element = {<Home/>}/>
-        <Route path = '/Gerenciar de mensagens' element = {<DataBaseManager/>}/>
+        <Route path = '/Gerenciar mensagens' element = {<DataBaseManager/>}/>
       </Routes>
     <Footer/>
     </BrowserRouter>

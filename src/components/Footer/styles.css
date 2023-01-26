@@ -1,0 +1,50 @@
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+footer div {
+    display: flex;
+    gap: 30px;
+    margin: 20px;
+}
+
+footer div label {
+    color: white;
+}
+
+footer .credits {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    font-size: 1.3rem;
+}
+
+footer .year {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    padding-top: 15px;
+    font-size: 1.3rem;
+}
+
+footer div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.979);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+footer div a:hover{
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 10px white;
+}

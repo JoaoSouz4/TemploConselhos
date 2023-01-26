@@ -1,7 +1,7 @@
 import './styles.css';
 import { AiFillHome } from 'react-icons/ai'
 import { ImDatabase } from 'react-icons/im'
-import { HiDocumentText } from 'react-icons/hi'
+import { IoMdDocument } from 'react-icons/io'
 import { BiMenu } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
@@ -33,7 +33,7 @@ export const Header = () => {
                     <div className="icon"><ImDatabase/>Gerenciar mensagens</div>
                 </Link>
                 <a href="#">
-                    <div className="icon"><HiDocumentText/>Doc do projeto</div>
+                    <div className="icon"><IoMdDocument/>Doc do projeto</div>
                 </a>
             </nav>
         </div>
