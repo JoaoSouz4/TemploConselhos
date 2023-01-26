@@ -1,12 +1,12 @@
 import './styles.css'
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { useState } from 'react'
-import { BoxMensage } from '../../components/BoxMensage'
 import { LoadComponent } from '../../components/LoadComponent'
+import BoxMensage from '../../components/BoxMensage'
 export const Home= () => {
   
 
-  const [currentMensage, setCurrentMensage] = useState();
+  const [currentMensage, setCurrentMensage] = useState({});
   const [loadStatus, setLoadStatus] = useState(false);
 
   const handleClick = ()=>{
@@ -16,12 +16,12 @@ export const Home= () => {
 
     fetch('https://api.adviceslip.com/advice')
     .then(resp => resp.json())
-    .then(resp => setCurrentMensage(resp.slip.advice));
+    .then(resp => setCurrentMensage({text: resp.slip.advice, id: resp.slip.id}));
+    console.log(currentMensage);
   }
 
   return (
     <div className="Home">
-
       <div className="informations">
         <h1>Templo dos Conselhos</h1>
         <p>Busque um conselho e saia mais sábio.</p>
@@ -32,7 +32,7 @@ export const Home= () => {
       </button>
 
       {loadStatus === true && <LoadComponent/>}
-      {loadStatus === false &&  <BoxMensage msg = {currentMensage}></BoxMensage>} 
+      {loadStatus === false &&  <BoxMensage msg = {currentMensage.text} id = {currentMensage.id}></BoxMensage>} 
     </div>
   );
  }
