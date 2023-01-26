@@ -35,5 +35,8 @@
 .Home button:hover {
     cursor: pointer;
     transition: 0.3s ease;
-    transform: scale(1.05);
+}
+
+.Home button:disabled{
+    background-color: rgb(209, 209, 209);
 }
