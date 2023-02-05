@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import MyMensage from '../../components/MyMensage';
+import { AiFillDelete } from 'react-icons/ai';
 import './styles.css'
 
 export const DataBaseManager = () => {
@@ -18,9 +19,15 @@ export const DataBaseManager = () => {
         }   
     },[]);
 
-    const handleDelete = () => {
-        console.log('delete')
-
+    const handleDelete = (id) => {
+        const array = [...dataStorage];
+            for(let i = 0;i<array.length;i++){
+                if(array[i].id == id){
+                 array.splice(i,1);
+                 localStorage.removeItem(id);
+                 setDataStorage(array);
+                 }
+        }
     }
 
     return (
@@ -30,13 +37,23 @@ export const DataBaseManager = () => {
                 <h1>Genrenciador de Mensagens</h1>
                 <p>Aqui estão salvas suas mensagens favoritas</p>
             </div>
-           
-                <input type="text" placeholder='Pesquisar mensagem salva'/>
-                <div className='container-msg'>
-                    {dataStorage.map((post)=>{
-                        return <MyMensage key = {post.id} id={post.id} post = {post.msg} func = {handleDelete}></MyMensage>
-                    })}
-                </div>
+            <div className='container-msg'>
+
+                {dataStorage.map((post)=>{
+
+                    return(
+                        <div className='option' key={post.id}>
+                            <label>{post.msg}</label>     
+                            <div className="icon-delete">
+                                <AiFillDelete onClick={()=>{
+                                    handleDelete(post.id)
+                                   
+                                }}/>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
