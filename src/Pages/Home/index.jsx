@@ -17,7 +17,6 @@ export const Home= () => {
     fetch('https://api.adviceslip.com/advice')
     .then(resp => resp.json())
     .then(resp => setCurrentMensage({text: resp.slip.advice, id: resp.slip.id}));
-    console.log(currentMensage);
   }
 
   return (

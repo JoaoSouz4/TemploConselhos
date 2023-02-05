@@ -1,0 +1,31 @@
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.option:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.option label{
+    width: 90%;
+}
+
+.icon-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 5px ;
+    border-left: 1px solid rgb(207, 207, 207);
+}
+
+.icon-delete:hover{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
