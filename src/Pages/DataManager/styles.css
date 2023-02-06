@@ -15,6 +15,10 @@ body{
     padding: 10px;
 }
 
+.titles h1{
+    font-size: 1.7rem;
+}
+
 .container-msg {
     display: flex;
     flex-direction: column;

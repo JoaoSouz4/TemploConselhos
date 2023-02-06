@@ -32,7 +32,7 @@ export const Header = () => {
                 <Link to = {'/Gerenciar mensagens'}>
                     <div className="icon"><ImDatabase/>Gerenciar mensagens</div>
                 </Link>
-                <a href="#">
+                <a href="https://drive.google.com/file/d/1lq-Ac4k4ecpeHB_lstJGfVoZIgnz5LWm/view?usp=sharing" target={'_blank'}>
                     <div className="icon"><IoMdDocument/>Doc do projeto</div>
                 </a>
             </nav>
