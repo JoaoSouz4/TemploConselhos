@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import MyMensage from '../../components/MyMensage';
 import { AiFillDelete } from 'react-icons/ai';
 import './styles.css'
 
@@ -33,27 +32,29 @@ export const DataBaseManager = () => {
     return (
 
         <div className='manager-container'>
+
             <div className="titles">
                 <h1>Genrenciador de Mensagens</h1>
                 <p>Aqui estão salvas suas mensagens favoritas</p>
             </div>
-            <div className='container-msg'>
 
-                {dataStorage.map((post)=>{
-
-                    return(
-                        <div className='option' key={post.id}>
-                            <label>{post.msg}</label>     
-                            <div className="icon-delete">
-                                <AiFillDelete onClick={()=>{
-                                    handleDelete(post.id)
-                                   
-                                }}/>
+            {!dataStorage.length && <div className='not-menssage'>Sem mensagens salvas :(</div>}
+            {dataStorage.length &&
+                <div className='container-msg'>
+                    {dataStorage.map((post)=>{
+                        return(
+                            <div className='option' key={post.id}>
+                                <label>{post.msg}</label>     
+                                <div className="icon-delete">
+                                    <AiFillDelete className = "btn-delete" onClick={()=>{
+                                        handleDelete(post.id) 
+                                    }}/>
+                                </div>
                             </div>
-                        </div>
-                    )
-                })}
-            </div>
+                        )
+                    })}
+                </div>
+            }          
         </div>
     )
 }

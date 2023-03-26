@@ -22,6 +22,7 @@ body{
 .container-msg {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width:40vw;
     height: 50%;
     background-color: rgba(0, 0, 0, 0.171);
@@ -38,4 +39,43 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.not-menssage{
+    width: 90%;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2rem;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+.option{
+    width: 90%;
+    background-color: #fafafa;
+    display: flex;
+    padding: 1.3rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    gap: 1.2rem;
+}
+
+.btn-delete{
+    border: 1px solid rgb(88, 88, 88);
+    padding: 0.3rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .manager-container{
+        width: 90vw;
+    }
+    .manager-container .titles{
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+    }
+    .container-msg{
+        width: 100%;
+    }
 }

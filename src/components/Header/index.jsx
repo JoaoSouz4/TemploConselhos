@@ -25,11 +25,22 @@ export const Header = () => {
      <header ref = {sidebarButton}>
         <div className='header-container'>
             <nav>
-                <Link to = {'/'}>
+                <Link 
+                    to = {'/'} 
+                    onClick = {()=>{
+                        sidebarButton.current.style.animationName = 'close';
+                        setIsSelect(false);
+                }}>
                     <div className="icon"><AiFillHome/>Home</div>
                 </Link>
 
-                <Link to = {'/Gerenciar mensagens'}>
+                <Link 
+                    to = {'/Gerenciar mensagens'}
+                    onClick = {()=>{
+                        sidebarButton.current.style.animationName = 'close';
+                        setIsSelect(false);
+                }}
+                >
                     <div className="icon"><ImDatabase/>Gerenciar mensagens</div>
                 </Link>
                 <a href="https://drive.google.com/file/d/1lq-Ac4k4ecpeHB_lstJGfVoZIgnz5LWm/view?usp=sharing" target={'_blank'}>
